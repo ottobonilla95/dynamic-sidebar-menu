@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from "@angular/core";
 import { MenuItem } from "../../models/menuItem.model";
 
 @Component({
-  selector: "app-item-list-bar-ng",
-  templateUrl: "./item-list-bar-ng.component.html",
-  styleUrls: ["./item-list-bar-ng.component.css"],
+  selector: "app-menu-item-ng",
+  templateUrl: "./menu-item-ng.component.html",
+  styleUrls: ["./menu-item-ng.component.css"],
 })
-export class ItemListBarNBComponent implements OnInit {
+export class MenuItemNGComponent implements OnInit {
   @Input("menuItem") menuItem: MenuItem;
 
   icon;

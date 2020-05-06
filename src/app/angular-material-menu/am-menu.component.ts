@@ -3,8 +3,8 @@ import { MenuItem } from "../models/menuitem.model";
 
 @Component({
   selector: "app-angular-material-menu",
-  templateUrl: "./angular-material-menu.component.html",
-  styleUrls: ["./angular-material-menu.component.css"],
+  templateUrl: "./am-menu.component.html",
+  styleUrls: ["./am-menu.component.css"],
 })
 export class AngularMaterialMenuComponent {
 

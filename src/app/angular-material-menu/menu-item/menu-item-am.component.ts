@@ -1,11 +1,11 @@
 import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: "app-item-list-bar-am",
-  templateUrl: "./item-list-bar-am.component.html",
-  styleUrls: ["./item-list-bar-am.component.css"],
+  selector: "app-menu-item-am",
+  templateUrl: "./menu-item-am.component.html",
+  styleUrls: ["./menu-item-am.component.css"],
 })
-export class ItemListBarAMComponent {
+export class MenuItemAMComponent {
   @Input("menuitem") menuitem;
   style;
   styleLink;
