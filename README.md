@@ -4,7 +4,7 @@
 This is a dynamic side bar menu.
 
 
-The component recive a list of objects with the follow structure:
+The component receive a list of objects with the following structure:
 
 Example:
 
