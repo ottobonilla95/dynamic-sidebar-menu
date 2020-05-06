@@ -1,0 +1,45 @@
+<div *ngIf="!hasChildrens; else elseBlock">
+  <a
+    href="#"
+    class="list-group-item list-group-item-action"
+    onclick="return false;"
+    [ngStyle]="styleLink"
+  >
+    <i class="material-icons" style="margin-right: 10px;">{{
+      menuItem.icon
+    }}</i>
+    {{ menuItem.text }}
+  </a>
+</div>
+
+<ng-template #elseBlock
+  ><a
+    href="#"
+    class="list-group-item list-group-item-action"
+    (click)="menuItem.isCollapsed = !menuItem.isCollapsed"
+    onclick="return false;"
+    [ngStyle]="style"
+  >
+    <i class="material-icons" style="width: 30px;">{{ menuItem.icon }}</i>
+    {{ menuItem.text }}
+    <i class="material-icons" style="float: right;"> keyboard_arrow_down</i>
+  </a>
+
+  <!-- colapse -->
+  <div
+    id="collapseBasic"
+    *ngIf="hasChildrens"
+    [collapse]="!menuItem.isCollapsed"
+    [isAnimated]="true"
+  >
+    <div
+      class="well well-lg card card-block card-header bg-light"
+      style="padding: 0; border: 0;"
+    >
+      <app-item-list-bar-ng
+        *ngFor="let children of menuItem.children"
+        [menuItem]="children"
+      ></app-item-list-bar-ng>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,13 @@
+.sidebar-menu {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  margin-right: 55px;
+}
+
+
+.main-container{
+    height: 100%;
+    position: absolute;
+    display: flex;
+}
