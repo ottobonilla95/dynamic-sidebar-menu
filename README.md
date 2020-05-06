@@ -1,27 +1,55 @@
-# DynamicSidebarMenu
+![Angular](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
+## Description
+This is a dynamic side bar menu.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The component recive a list of objects with the follow structure:
 
-## Code scaffolding
+Example:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    [
+      {
+        id: "1",
+        text: "Item1",
+        action: undefined,
+        icon: "home",
+        menuFatherId: undefined,
+      },
+      {
+        id: "2",
+        text: "Item2",
+        action: undefined,
+        icon: "home",
+        menuFatherId: undefined,
+      }
+    ]
+    
+    
 
-## Build
+If you wanted to add a child to an item, what you should do is modify the property "menuFatherId" of the child item and put the id of the father.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Example:
 
-## Running unit tests
+    [
+      {
+        id: "1",
+        text: "Item1",
+        action: undefined,
+        icon: "home",
+        menuFatherId: undefined,
+      },
+      {
+        id: "2",
+        text: "Item1.1",
+        action: undefined,
+        icon: "home",
+        menuFatherId: "1",
+      }
+    ]
+    
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Demo
+[Demo](https://codesandbox.io/s/adoring-platform-jtl4v).
